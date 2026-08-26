@@ -400,4 +400,69 @@ namespace CSLT_chiều_t3.buổi2
                 Console.ReadLine();
             }
     }*/
+
+    /*internal class BAI8
+    {
+            static void Main(string[] args)
+            {
+                Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+                // 1. Hệ thống tạo sẵn mã OTP và thời gian
+                string correctOtp = "839201";
+                DateTime creationTime = DateTime.Now;
+
+                // 2. Thu thập dữ liệu Input từ người dùng
+                Console.WriteLine("--- INPUT ---");
+                Console.Write("Mã OTP nhận được: ");
+                string inputOtp = Console.ReadLine() ?? "";
+
+                // Giả lập nhập thời gian trôi qua để test nhanh
+                Console.Write("Thời gian trôi qua - Phút: ");
+                int.TryParse(Console.ReadLine(), out int elapsedMinutes);
+
+                Console.Write("Thời gian trôi qua - Giây: ");
+                int.TryParse(Console.ReadLine(), out int elapsedSeconds);
+
+                Console.WriteLine("\n--- OUTPUT ---");
+
+                // Tạo TimeSpan mô phỏng thời gian đã trôi qua
+                TimeSpan timePassed = new TimeSpan(0, elapsedMinutes, elapsedSeconds);
+
+                // Giả lập thời điểm người dùng bấm nút "Xác nhận"
+                DateTime verificationTime = creationTime.Add(timePassed);
+
+                // 3. Tiến hành kiểm tra 3 điều kiện an toàn
+
+                // Điều kiện 1: Chuỗi nhập vào đúng đủ 6 ký tự và toàn là số
+                bool isNumeric = int.TryParse(inputOtp, out _);
+                bool isValidFormat = inputOtp.Length == 6 && isNumeric;
+
+                if (!isValidFormat)
+                {
+                    Console.WriteLine("Trạng thái xác thực: LỖI - Định dạng không hợp lệ.");
+                    return;
+                }
+
+                // Điều kiện 3 (kiểm tra trước mã OTP để báo hết hạn nếu đã quá giờ): 
+                // Thời điểm xác thực không vượt quá 5 phút (300 giây)
+                TimeSpan difference = verificationTime - creationTime;
+                if (difference.TotalSeconds > 300)
+                {
+                    Console.WriteLine("Trạng thái xác thực: LỖI - Hết hạn OTP.");
+                    return;
+                }
+
+                // Điều kiện 2: Mã OTP nhập vào khớp hoàn toàn với mã hệ thống
+                if (inputOtp != correctOtp)
+                {
+                    Console.WriteLine("Trạng thái xác thực: LỖI - Mã sai.");
+                    return;
+                }
+
+                // Vượt qua toàn bộ bài kiểm tra
+                Console.WriteLine("Trạng thái xác thực: THÀNH CÔNG - Giao dịch đã được phê duyệt.");
+            }
+    }*/
+
+
 }
