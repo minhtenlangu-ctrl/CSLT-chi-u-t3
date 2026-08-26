@@ -330,6 +330,74 @@ namespace CSLT_chiều_t3.buổi2
             }
         }*/
 
-    internal class BAI7
+    /*internal class BAI7
+    {
     
+            static void Main(string[] args)
+            {
+                // Thiết lập hiển thị tiếng Việt có dấu trong Console
+                Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+                Console.WriteLine("--- INPUT ---");
+
+                // 1. Nhập khoảng cách chuyến đi (km - kiểu double)
+                Console.Write("Quãng đường (km): ");
+                if (!double.TryParse(Console.ReadLine(), out double distance) || distance <= 0)
+                {
+                    Console.WriteLine("Lỗi: Quãng đường phải là một số dương hợp lệ.");
+                    return;
+                }
+
+                // 2. Nhập mức tiêu thụ nhiên liệu trung bình (L/100km - kiểu double)
+                Console.Write("Mức tiêu hao (L/100km): ");
+                if (!double.TryParse(Console.ReadLine(), out double consumption) || consumption <= 0)
+                {
+                    Console.WriteLine("Lỗi: Mức tiêu thụ nhiên liệu phải là một số dương hợp lệ.");
+                    return;
+                }
+
+                // 3. Nhập giá xăng hiện tại (VNĐ/Lít - kiểu decimal)
+                Console.Write("Giá xăng (VNĐ/Lít): ");
+                if (!decimal.TryParse(Console.ReadLine(), out decimal fuelPrice) || fuelPrice <= 0)
+                {
+                    Console.WriteLine("Lỗi: Giá xăng phải là một số dương hợp lệ.");
+                    return;
+                }
+
+                // 4. Nhập số lượng người tham gia (người - kiểu int)
+                Console.Write("Số người đi: ");
+                if (!int.TryParse(Console.ReadLine(), out int peopleCount) || peopleCount <= 0)
+                {
+                    Console.WriteLine("Lỗi: Số người đi phải là một số nguyên dương.");
+                    return;
+                }
+
+                // --- TÍNH TOÁN ---
+
+                // Tổng số lít xăng cần dùng
+                double totalFuel = (distance / 100.0) * consumption;
+
+                // Tổng chi phí tiền xăng (Ép kiểu totalFuel sang decimal để nhân chính xác)
+                decimal totalCost = (decimal)totalFuel * fuelPrice;
+
+                // Chi phí trung bình thực tế cho 1 người
+                decimal rawCostPerPerson = totalCost / peopleCount;
+
+                // Làm tròn LÊN hàng nghìn gần nhất bằng Math.Ceiling
+                // Chia cho 1000 -> làm tròn lên nguyên -> nhân lại 1000
+                decimal costPerPersonRounded = (decimal)Math.Ceiling((double)rawCostPerPerson / 1000.0) * 1000m;
+
+                // --- OUTPUT ---
+                Console.WriteLine("--- OUTPUT ---");
+
+                // Định dạng 0.00 để hiển thị 2 chữ số thập phân cho nhiên liệu
+                Console.WriteLine($"Tổng nhiên liệu tiêu thụ: {totalFuel:0.00} Lít");
+
+                // Định dạng #,##0 để thêm dấu phẩy phân cách hàng nghìn cho số tiền
+                Console.WriteLine($"Tổng chi phí xăng dầu: {totalCost:#,##0} VNĐ");
+                Console.WriteLine($"Chi phí mỗi người: {costPerPersonRounded:#,##0} VNĐ");
+
+                Console.ReadLine();
+            }
+    }*/
 }
