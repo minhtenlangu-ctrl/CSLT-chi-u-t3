@@ -101,234 +101,234 @@ namespace CSLT_chiều_t3.buổi2
        }
    }*/
 
-       /* enum CurrencyType
-        {
-            USD = 1,
-            EUR = 2,
-            JPY = 3,
-            GBP = 4
-        }
+    /* enum CurrencyType
+     {
+         USD = 1,
+         EUR = 2,
+         JPY = 3,
+         GBP = 4
+     }
 
-        internal class BAI3
-        {
-            static void Main()
-            {
-                Console.OutputEncoding = System.Text.Encoding.UTF8;
-
-                Console.Write("Nhập số tiền VNĐ: ");
-                decimal soTienVnd = decimal.Parse(Console.ReadLine());
-
-                Console.Write("Chọn ngoại tệ (1-USD, 2-EUR, 3-JPY, 4-GBP): ");
-                CurrencyType loaiNgoaiTe = (CurrencyType)int.Parse(Console.ReadLine());
-
-                decimal phiDichVu = soTienVnd * 0.005m;
-                decimal tienVndSauPhi = soTienVnd - phiDichVu;
-
-                decimal tyGia = 0m;
-                string maTienTe = "";
-
-                switch (loaiNgoaiTe)
-                {
-                    case CurrencyType.USD:
-                        tyGia = 25400m;
-                        maTienTe = "USD";
-                        break;
-                    case CurrencyType.EUR:
-                        tyGia = 27200m;
-                        maTienTe = "EUR";
-                        break;
-                    case CurrencyType.JPY:
-                        tyGia = 165m;
-                        maTienTe = "JPY";
-                        break;
-                    case CurrencyType.GBP:
-                        tyGia = 32100m;
-                        maTienTe = "GBP";
-                        break;
-                    default:
-                        Console.WriteLine("Loại ngoại tệ không hợp lệ!");
-                        return;
-                }
-
-                decimal soTienNgoaiTe = tienVndSauPhi / tyGia;
-
-                Console.WriteLine("\n--- OUTPUT ---");
-                Console.WriteLine($"Phí dịch vụ (0.5%): {phiDichVu:#,##0} VNĐ");
-                Console.WriteLine($"Số tiền VNĐ tính đổi: {tienVndSauPhi:#,##0} VNĐ");
-                Console.WriteLine($"Số tiền {maTienTe} nhận được: {soTienNgoaiTe:N2} {maTienTe}");
-            }
-        }*/
-
-        /*internal class BAI4
+     internal class BAI3
+     {
+         static void Main()
          {
-             static void Main()
+             Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+             Console.Write("Nhập số tiền VNĐ: ");
+             decimal soTienVnd = decimal.Parse(Console.ReadLine());
+
+             Console.Write("Chọn ngoại tệ (1-USD, 2-EUR, 3-JPY, 4-GBP): ");
+             CurrencyType loaiNgoaiTe = (CurrencyType)int.Parse(Console.ReadLine());
+
+             decimal phiDichVu = soTienVnd * 0.005m;
+             decimal tienVndSauPhi = soTienVnd - phiDichVu;
+
+             decimal tyGia = 0m;
+             string maTienTe = "";
+
+             switch (loaiNgoaiTe)
              {
-                 Console.OutputEncoding = System.Text.Encoding.UTF8;
-
-                 Console.Write("Nhập ngày sinh (dd/MM/yyyy): ");
-                 string input = Console.ReadLine();
-
-                 if (!DateTime.TryParseExact(input, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime ngaySinh))
-                 {
-                     Console.WriteLine("Định dạng ngày sinh không hợp lệ!");
+                 case CurrencyType.USD:
+                     tyGia = 25400m;
+                     maTienTe = "USD";
+                     break;
+                 case CurrencyType.EUR:
+                     tyGia = 27200m;
+                     maTienTe = "EUR";
+                     break;
+                 case CurrencyType.JPY:
+                     tyGia = 165m;
+                     maTienTe = "JPY";
+                     break;
+                 case CurrencyType.GBP:
+                     tyGia = 32100m;
+                     maTienTe = "GBP";
+                     break;
+                 default:
+                     Console.WriteLine("Loại ngoại tệ không hợp lệ!");
                      return;
-                 }
-
-                 DateTime ngayHienTai = DateTime.Now.Date;
-
-                 // Tính tuổi
-                 int tuoi = ngayHienTai.Year - ngaySinh.Year;
-                 if (ngayHienTai < ngaySinh.AddYears(tuoi))
-                 {
-                     tuoi--;
-                 }
-
-                 // Tính tổng số ngày đã sống
-                 int tongSoNgaySong = (int)(ngayHienTai - ngaySinh).TotalDays;
-
-                 // Tính ngày sinh nhật tiếp theo
-                 DateTime sinhNhatTiepTheo = new DateTime(ngayHienTai.Year, ngaySinh.Month, ngaySinh.Day);
-                 if (sinhNhatTiepTheo < ngayHienTai)
-                 {
-                     sinhNhatTiepTheo = sinhNhatTiepTheo.AddYears(1);
-                 }
-
-                 int soNgayConLai = (int)(sinhNhatTiepTheo - ngayHienTai).TotalDays;
-
-                 Console.WriteLine("\n--- OUTPUT ---");
-                 Console.WriteLine($"Tuổi hiện tại: {tuoi} tuổi");
-                 Console.WriteLine($"Bạn đã sống tổng cộng: {tongSoNgaySong:#,##0} ngày");
-                 Console.WriteLine($"Sinh nhật tiếp theo còn: {soNgayConLai} ngày nữa");
              }
-         }*/
 
-        /*internal class Bai5
+             decimal soTienNgoaiTe = tienVndSauPhi / tyGia;
+
+             Console.WriteLine("\n--- OUTPUT ---");
+             Console.WriteLine($"Phí dịch vụ (0.5%): {phiDichVu:#,##0} VNĐ");
+             Console.WriteLine($"Số tiền VNĐ tính đổi: {tienVndSauPhi:#,##0} VNĐ");
+             Console.WriteLine($"Số tiền {maTienTe} nhận được: {soTienNgoaiTe:N2} {maTienTe}");
+         }
+     }*/
+
+    /*internal class BAI4
+     {
+         static void Main()
+         {
+             Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+             Console.Write("Nhập ngày sinh (dd/MM/yyyy): ");
+             string input = Console.ReadLine();
+
+             if (!DateTime.TryParseExact(input, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime ngaySinh))
+             {
+                 Console.WriteLine("Định dạng ngày sinh không hợp lệ!");
+                 return;
+             }
+
+             DateTime ngayHienTai = DateTime.Now.Date;
+
+             // Tính tuổi
+             int tuoi = ngayHienTai.Year - ngaySinh.Year;
+             if (ngayHienTai < ngaySinh.AddYears(tuoi))
+             {
+                 tuoi--;
+             }
+
+             // Tính tổng số ngày đã sống
+             int tongSoNgaySong = (int)(ngayHienTai - ngaySinh).TotalDays;
+
+             // Tính ngày sinh nhật tiếp theo
+             DateTime sinhNhatTiepTheo = new DateTime(ngayHienTai.Year, ngaySinh.Month, ngaySinh.Day);
+             if (sinhNhatTiepTheo < ngayHienTai)
+             {
+                 sinhNhatTiepTheo = sinhNhatTiepTheo.AddYears(1);
+             }
+
+             int soNgayConLai = (int)(sinhNhatTiepTheo - ngayHienTai).TotalDays;
+
+             Console.WriteLine("\n--- OUTPUT ---");
+             Console.WriteLine($"Tuổi hiện tại: {tuoi} tuổi");
+             Console.WriteLine($"Bạn đã sống tổng cộng: {tongSoNgaySong:#,##0} ngày");
+             Console.WriteLine($"Sinh nhật tiếp theo còn: {soNgayConLai} ngày nữa");
+         }
+     }*/
+
+    /*internal class Bai5
+    {
+        static void Main()
         {
-            static void Main()
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            int tcCSharp = 4, tcToan = 3, tcTiengAnh = 2;
+
+            Console.Write($"C# ({tcCSharp} TC): ");
+            double diemCSharp = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Console.Write($"Toán ({tcToan} TC): ");
+            double diemToan = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Console.Write($"Tiếng Anh ({tcTiengAnh} TC): ");
+            double diemTiengAnh = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            int tongTinChi = tcCSharp + tcToan + tcTiengAnh;
+            double scoreAvg = ((diemCSharp * tcCSharp) + (diemToan * tcToan) + (diemTiengAnh * tcTiengAnh)) / tongTinChi;
+
+            string diemChu = "";
+            double gpa4 = 0.0;
+            string xepLoai = "";
+
+            // Quy đổi theo đúng bảng trong đề bài
+            if (scoreAvg >= 8.5)
             {
-                Console.OutputEncoding = System.Text.Encoding.UTF8;
-
-                int tcCSharp = 4, tcToan = 3, tcTiengAnh = 2;
-
-                Console.Write($"C# ({tcCSharp} TC): ");
-                double diemCSharp = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-                Console.Write($"Toán ({tcToan} TC): ");
-                double diemToan = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-                Console.Write($"Tiếng Anh ({tcTiengAnh} TC): ");
-                double diemTiengAnh = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-                int tongTinChi = tcCSharp + tcToan + tcTiengAnh;
-                double scoreAvg = ((diemCSharp * tcCSharp) + (diemToan * tcToan) + (diemTiengAnh * tcTiengAnh)) / tongTinChi;
-
-                string diemChu = "";
-                double gpa4 = 0.0;
-                string xepLoai = "";
-
-                // Quy đổi theo đúng bảng trong đề bài
-                if (scoreAvg >= 8.5)
-                {
-                    diemChu = "A";
-                    gpa4 = 4.0;
-                    xepLoai = "Xuất sắc / Giỏi";
-                }
-                else if (scoreAvg >= 7.0)
-                {
-                    diemChu = "B";
-                    gpa4 = 3.0;
-                    xepLoai = "Khá";
-                }
-                else if (scoreAvg >= 5.5)
-                {
-                    diemChu = "C";
-                    gpa4 = 2.0;
-                    xepLoai = "Trung bình";
-                }
-                else if (scoreAvg >= 4.0)
-                {
-                    diemChu = "D";
-                    gpa4 = 1.0;
-                    xepLoai = "Yếu";
-                }
-                else
-                {
-                    diemChu = "F";
-                    gpa4 = 0.0;
-                    xepLoai = "Kém (Trượt)";
-                }
-
-                Console.WriteLine("\n--- OUTPUT ---");
-                Console.WriteLine($"Điểm TB Thang 10: {scoreAvg.ToString("F2", CultureInfo.InvariantCulture)}");
-                Console.WriteLine($"Điểm Chữ Quy Đổi: {diemChu}");
-                Console.WriteLine($"Điểm GPA Thang 4: {gpa4.ToString("F1", CultureInfo.InvariantCulture)}");
-                Console.WriteLine($"Xếp Loại Học Lực: {xepLoai}");
+                diemChu = "A";
+                gpa4 = 4.0;
+                xepLoai = "Xuất sắc / Giỏi";
             }
-        }*/
+            else if (scoreAvg >= 7.0)
+            {
+                diemChu = "B";
+                gpa4 = 3.0;
+                xepLoai = "Khá";
+            }
+            else if (scoreAvg >= 5.5)
+            {
+                diemChu = "C";
+                gpa4 = 2.0;
+                xepLoai = "Trung bình";
+            }
+            else if (scoreAvg >= 4.0)
+            {
+                diemChu = "D";
+                gpa4 = 1.0;
+                xepLoai = "Yếu";
+            }
+            else
+            {
+                diemChu = "F";
+                gpa4 = 0.0;
+                xepLoai = "Kém (Trượt)";
+            }
 
-        /*internal class Bai6
+            Console.WriteLine("\n--- OUTPUT ---");
+            Console.WriteLine($"Điểm TB Thang 10: {scoreAvg.ToString("F2", CultureInfo.InvariantCulture)}");
+            Console.WriteLine($"Điểm Chữ Quy Đổi: {diemChu}");
+            Console.WriteLine($"Điểm GPA Thang 4: {gpa4.ToString("F1", CultureInfo.InvariantCulture)}");
+            Console.WriteLine($"Xếp Loại Học Lực: {xepLoai}");
+        }
+    }*/
+
+    /*internal class Bai6
+    {
+        static void Main()
         {
-            static void Main()
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.InputEncoding = Encoding.UTF8;
+
+            Console.Write("Nhập họ tên thô: ");
+            string input = Console.ReadLine();
+            string[] words = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+            if (words.Length == 0)
             {
-                Console.OutputEncoding = Encoding.UTF8;
-                Console.InputEncoding = Encoding.UTF8;
-
-                Console.Write("Nhập họ tên thô: ");
-                string input = Console.ReadLine();
-                string[] words = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-
-                if (words.Length == 0)
-                {
-                    Console.WriteLine("Họ tên không hợp lệ!");
-                    return;
-                }
-                for (int i = 0; i < words.Length; i++)
-                {
-                    string word = words[i].ToLower();
-                    words[i] = char.ToUpper(word[0]) + word.Substring(1);
-                }
-
-                string hoTenChuanHoa = string.Join(" ", words);
-                string ho = words[0];
-                string ten = words[words.Length - 1];
-                string tenDem = words.Length > 2
-                    ? string.Join(" ", words.Skip(1).Take(words.Length - 2))
-                    : (words.Length == 2 ? words[0] : "");
-                string tenKhongDau = LoaiBoDauTiengViet(ten).ToLower();
-                string hoKhongDau = LoaiBoDauTiengViet(ho).ToLower();
-
-                string tenDemKhongDau = "";
-                if (words.Length > 2)
-                {
-                    var tenDemWords = words.Skip(1).Take(words.Length - 2).Select(w => LoaiBoDauTiengViet(w).ToLower());
-                    tenDemKhongDau = string.Join("", tenDemWords);
-                }
-
-                string username = $"{tenKhongDau}.{hoKhongDau}{tenDemKhongDau}";
-                string email = $"{username}@company.edu.vn";
-
-                Console.WriteLine("\n--- OUTPUT ---");
-                Console.WriteLine($"Họ tên chuẩn hóa: {hoTenChuanHoa}");
-                Console.WriteLine($"Họ: {ho} | Tên đệm: {(string.IsNullOrEmpty(tenDem) ? "Không có" : tenDem)} | Tên: {ten}");
-                Console.WriteLine($"Username tạo tự động: {username}");
-                Console.WriteLine($"Email cấp phát: {email}");
+                Console.WriteLine("Họ tên không hợp lệ!");
+                return;
             }
-            static string LoaiBoDauTiengViet(string text)
+            for (int i = 0; i < words.Length; i++)
             {
-                string normalized = text.Normalize(NormalizationForm.FormD);
-                StringBuilder sb = new StringBuilder();
-
-                foreach (char c in normalized)
-                {
-                    UnicodeCategory uc = CharUnicodeInfo.GetUnicodeCategory(c);
-                    if (uc != UnicodeCategory.NonSpacingMark)
-                    {
-                        sb.Append(c);
-                    }
-                }
-                        return sb.ToString().Normalize(NormalizationForm.FormC).Replace('đ', 'd').Replace('Đ', 'D');
+                string word = words[i].ToLower();
+                words[i] = char.ToUpper(word[0]) + word.Substring(1);
             }
-        }*/
+
+            string hoTenChuanHoa = string.Join(" ", words);
+            string ho = words[0];
+            string ten = words[words.Length - 1];
+            string tenDem = words.Length > 2
+                ? string.Join(" ", words.Skip(1).Take(words.Length - 2))
+                : (words.Length == 2 ? words[0] : "");
+            string tenKhongDau = LoaiBoDauTiengViet(ten).ToLower();
+            string hoKhongDau = LoaiBoDauTiengViet(ho).ToLower();
+
+            string tenDemKhongDau = "";
+            if (words.Length > 2)
+            {
+                var tenDemWords = words.Skip(1).Take(words.Length - 2).Select(w => LoaiBoDauTiengViet(w).ToLower());
+                tenDemKhongDau = string.Join("", tenDemWords);
+            }
+
+            string username = $"{tenKhongDau}.{hoKhongDau}{tenDemKhongDau}";
+            string email = $"{username}@company.edu.vn";
+
+            Console.WriteLine("\n--- OUTPUT ---");
+            Console.WriteLine($"Họ tên chuẩn hóa: {hoTenChuanHoa}");
+            Console.WriteLine($"Họ: {ho} | Tên đệm: {(string.IsNullOrEmpty(tenDem) ? "Không có" : tenDem)} | Tên: {ten}");
+            Console.WriteLine($"Username tạo tự động: {username}");
+            Console.WriteLine($"Email cấp phát: {email}");
+        }
+        static string LoaiBoDauTiengViet(string text)
+        {
+            string normalized = text.Normalize(NormalizationForm.FormD);
+            StringBuilder sb = new StringBuilder();
+
+            foreach (char c in normalized)
+            {
+                UnicodeCategory uc = CharUnicodeInfo.GetUnicodeCategory(c);
+                if (uc != UnicodeCategory.NonSpacingMark)
+                {
+                    sb.Append(c);
+                }
+            }
+                    return sb.ToString().Normalize(NormalizationForm.FormC).Replace('đ', 'd').Replace('Đ', 'D');
+        }
+    }*/
 
     /*internal class BAI7
     {
@@ -464,5 +464,95 @@ namespace CSLT_chiều_t3.buổi2
             }
     }*/
 
+    /*internal class BAI9
+        {
+            static void Main()
+            {
+                Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+                Console.Write("Nhập Lương Gross (VNĐ): ");
+                decimal gross = decimal.Parse(Console.ReadLine());
+
+                Console.Write("Số người phụ thuộc: ");
+                int dependents = int.Parse(Console.ReadLine());
+
+                decimal insurance = gross * 0.105m;
+
+                decimal taxableIncome = gross - insurance - 11000000m - (dependents * 4400000m);
+                if (taxableIncome < 0) taxableIncome = 0;
+
+                decimal personalTax = CalculatePIT(taxableIncome);
+
+                decimal netSalary = gross - insurance - personalTax;
+
+                Console.WriteLine("\n--- OUTPUT ---");
+                Console.WriteLine($"Giảm trừ Bảo hiểm (10.5%): {insurance:N0} VNĐ");
+                Console.WriteLine($"Thu nhập chịu thuế: {taxableIncome:N0} VNĐ");
+                Console.WriteLine($"Thuế TNCN phải nộp: {personalTax:N0} VNĐ");
+                Console.WriteLine($"LƯƠNG NET THỰC NHẬN: {netSalary:N0} VNĐ");
+            }
+
+            static decimal CalculatePIT(decimal taxableIncome)
+            {
+                if (taxableIncome <= 0) return 0;
+
+                decimal tax = 0;
+                if (taxableIncome > 5000000m)
+                {
+                    tax += 5000000m * 0.05m;
+                    taxableIncome -= 5000000m;
+                }
+                else return tax + taxableIncome * 0.05m;
+
+                if (taxableIncome > 5000000m)
+                {
+                    tax += 5000000m * 0.10m;
+                    taxableIncome -= 5000000m;
+                }
+                else return tax + taxableIncome * 0.10m;
+
+                if (taxableIncome > 8000000m)
+                {
+                    tax += 8000000m * 0.15m;
+                    taxableIncome -= 8000000m;
+                }
+                else return tax + taxableIncome * 0.15m;
+
+                return tax;
+            }
+        }*/
+
+    /*internal class BAI11
+    {
+        static void Main()
+        {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            Console.Write("Số tiền gửi: ");
+            decimal principal = decimal.Parse(Console.ReadLine());
+
+            Console.Write("Lãi suất năm (%): ");
+            double annualRate = double.Parse(Console.ReadLine());
+
+            Console.Write("Thời gian gửi (tháng): ");
+            int months = int.Parse(Console.ReadLine());
+
+            decimal simpleInterest = principal * (decimal)(annualRate / 100) * (months / 12.0m);
+
+            double ratePerMonth = annualRate / 100 / 12;
+            double compoundAmountDouble = (double)principal * Math.Pow(1 + ratePerMonth, months);
+            decimal compoundInterest = (decimal)compoundAmountDouble - principal;
+
+            decimal difference = compoundInterest - simpleInterest;
+
+
+            Console.WriteLine("\n--- OUTPUT ---");
+            Console.WriteLine($"Tổng tiền lãi (Lãi đơn): {simpleInterest:N0} VNĐ");
+            Console.WriteLine($"Tổng tiền lãi (Lãi kép): {compoundInterest:N0} VNĐ");
+            Console.WriteLine($"Lợi nhuận chênh lệch: {difference:N0} VNĐ (Lãi kép tối ưu hơn)");
+        }
+    }*/
+
 
 }
+
