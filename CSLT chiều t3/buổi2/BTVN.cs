@@ -524,8 +524,7 @@ namespace CSLT_chiều_t3.buổi2
 
     /*internal class BAI11
     {
-        static void Main()
-        {
+       
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             Console.Write("Số tiền gửi: ");
@@ -550,7 +549,7 @@ namespace CSLT_chiều_t3.buổi2
             Console.WriteLine($"Tổng tiền lãi (Lãi đơn): {simpleInterest:N0} VNĐ");
             Console.WriteLine($"Tổng tiền lãi (Lãi kép): {compoundInterest:N0} VNĐ");
             Console.WriteLine($"Lợi nhuận chênh lệch: {difference:N0} VNĐ (Lãi kép tối ưu hơn)");
-        }
+        
     }*/
 
 
