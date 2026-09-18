@@ -6,12 +6,11 @@
     <RootNamespace>CSLT_chiều_t3</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>CSLT_chiều_t3.buổi3.BT_1</StartupObject>
+    <StartupObject>buổi4onl.baitap2</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="buổi1\" />
-    <Folder Include="buổi4%28onl%29\" />
   </ItemGroup>
 
 </Project>
