@@ -6,7 +6,7 @@
     <RootNamespace>CSLT_chiều_t3</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>buổi4onl.baitap2</StartupObject>
+    <StartupObject></StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

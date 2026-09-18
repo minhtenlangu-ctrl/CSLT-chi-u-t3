@@ -243,7 +243,69 @@ Console.WriteLine("""
                     play = false;
                 }
             }
+         Console.WriteLine("\n=================================");
+         Console.WriteLine("Cam on ban da choi!");
+         Console.WriteLine("So tien cuoi cung: " + money + " dong");
+         Console.WriteLine("=================================");
         }
+    }*/
 
+     /*internal class bt6
+     {
+         public static void Main(string[] args)
+         {
+             Console.Write("Nhap so luong so hang n: ");
+             int n = int.Parse(Console.ReadLine());
+
+             double sum = 0;
+
+             Console.Write("Harmonic Series: ");
+
+             for (int i = 1; i <= n; i++)
+             {
+                 Console.Write($"1/{i}");
+
+                 if (i < n)
+                 {
+                     Console.Write(" + ");
+                 }
+
+                 sum += 1.0 / i;
+             }
+
+             Console.WriteLine();
+             Console.WriteLine($"Sum = {sum}");
+         }
+     }*/
+    /*internal class bt7
+    {
+        public static void Main(string[] args)
+        {
+            Console.Write("Nhap so bat dau: ");
+            int start = int.Parse(Console.ReadLine());
+
+            Console.Write("Nhap so ket thuc: ");
+            int end = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Perfect numbers:");
+
+            for (int number = start; number <= end; number++)
+            {
+                int sum = 0;
+
+                for (int i = 1; i < number; i++)
+                {
+                    if (number % i == 0)
+                    {
+                        sum += i;
+                    }
+                }
+
+                if (sum == number)
+                {
+                    Console.WriteLine(number);
+                }
+            }
+        }
     }*/
 }
